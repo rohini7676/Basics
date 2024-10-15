@@ -108,7 +108,33 @@ for(int i=0;i<n;i++)
         count++;
     }
 }
+
+
 cout<<count;
 }
-
+//FIBONACCI SERIES BY DYNAMIC PROGRAMMING
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static int Fibo(int n,int dp[])
+    {
+        if(n<=1)
+        return dp[n];
+        else if(dp[n]!=0)
+        {
+            return dp[n];
+        }
+        else
+        dp[n]=Fibo(n-2,dp)+Fibo(n-1,dp);
+        return dp[n];
+    }
+    public static void main(String[] args) {
+       int n=6;
+       int dp[]=new int[n+1];
+       dp[0]=0;
+       dp[1]=1;
+       System.out.println(Fibo(n,dp));
+    }
+}
 
