@@ -1,0 +1,79 @@
+//FINDING THE MAXIMUM VALUE
+#include <iostream>
+using namespace std;
+int maxo(int *arr,int n)
+{
+    int maxe=*arr;
+    for(int i=1;i<n;i++)
+    {
+        if(*(arr+i)>maxe)
+        {
+            maxe=*(arr+i);
+        }
+    }
+    return maxe;
+}
+int main() {
+    int arr[]={1,2,3,4,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<maxo(arr,n);
+    return 0;
+}
+//FINDING THE MINIMUM VALUE
+#include <iostream>
+using namespace std;
+int mino(int *arr,int n)
+{
+    int mino=*arr;
+    for(int i=1;i<n;i++)
+    {
+        if(*(arr+i)<mino)
+        {
+            mino=*(arr+i);
+        }
+    }
+    return mino;
+}
+int main() {
+    int arr[]={1,2,3,4,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<mino(arr,n);
+    return 0;
+}
+//FINDING THE TOTAL SUM
+#include <iostream>
+using namespace std;
+int sum(int *arr,int n)
+{
+    int sum=*arr;
+    for(int i=1;i<n;i++)
+    {
+        sum+=*(arr+i);
+    }
+    return sum;
+}
+int main() {
+    int arr[]={1,2,3,4,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<sum(arr,n);
+    return 0;
+}
+//FINDING THE AVERAGE OF THE SUM
+#include <iostream>
+using namespace std;
+int avg(int *arr,int n)
+{
+    int sum=*arr;
+    for(int i=1;i<n;i++)
+    {
+        sum+=*(arr+i);
+    }
+    return sum/n;
+}
+int main() {
+    int arr[]={1,2,3,4,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<avg(arr,n);
+    return 0;
+}
+
