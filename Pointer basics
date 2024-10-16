@@ -165,4 +165,356 @@ class HelloWorld {
    }
     
 }
+//DAY 2:
+import java.util.*;
+class Main{
+    
+   /*  
+   //IF-ELSE FOR GRADE:
+   int marks=sc.nextInt();
+        if(marks>=90 && marks<=100)
+        {
+            System.out.println("GRADE O");
+        }
+         else if(marks>=80 && marks<=90)
+        {
+            System.out.println("GRADE A");
+        }
+        else if(marks>=70 && marks<=80)
+        {
+            System.out.println("GRADE B");
+        }
+        else
+        {
+            System.out.println("F");
+        }
+        //IF ELSE FOR LEAP YEAR
+        int year=sc.nextInt();
+        if((year%400)==0 || ((year%4==0 )&& (year%100!=0)))
+        {
+            System.out.println("Leap year");
+        }
+        else
+        {
+            System.out.println("Not Leap year");
+        }
+        //FINDING APPLE TREE AND MANGO TREE
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        int treeno=sc.nextInt();
+        if(((treeno>=1)&&(treeno<=col))||(treeno%col==1)||(treeno%col==0))
+        {
+            System.out.println("Mango tree");
+        }
+        else
+        {
+            System.out.println("Apple tree");
+        }
+        //FINDING THE ROOTS
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        double delta=((b*b)-(4*a*c));
+        
+        if(delta>=0)
+        {
+             double r1=((-b+Math.sqrt(delta))/(2*a));
+             double r2=((-b-Math.sqrt(delta))/(2*a));
+        
+            System.out.println("Real roots");
+            System.out.println(r1);
+            System.out.println(r2);
+            
+            
+        }
+        if(delta<0)
+        {
+            System.out.println("No real roots");
+        }
+        //SQUARE PATTERN
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        for(int i=0;i<row;i++)
+        {
+            for(int j=0;j<col;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //RECTANGLE PATTERN
+         int row=4;
+        int col=6;
+        for(int i=0;i<row;i++)
+        {
+            for(int j=0;j<col;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //HOLLOW SQUARE
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=1;j<=col;j++)
+            {
+                if((i==1)||(j==1)||(i==row)||(j==col))
+                {
+                    System.out.print("*");
+                }
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        //UPPER TRIANGLE
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //NUMBERS
+        int c=1;
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=i;j<=col;j++)
+            {
+              System.out.print(c+" ");
+              c++;
+            }
+            System.out.println();
+        }
+       // PRINTING THE ODD AND EVEN NUMBERS
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        int c1=1;
+        int c2=2;
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=1;j<=col;j++)
+            {
+                if(i%2!=0)
+                {
+                    System.out.print(c1+" ");
+                    c1+=2;
+                }
+                else
+                {
+                    System.out.print(c2+" ");
+                    c2+=2;
+                }
+            }
+            System.out.println();
+        }
+        //RIGHT ANGLED TRIANGLE
+        int row=sc.nextInt();
+      
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=1;j<=row-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=1;k<=i;k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //PATTERN WITH MISSING STARS
+        int row=sc.nextInt();
+        for(int i=1;i<=row;i++)
+        {
+            for(int k=1;k<=i;k++)
+            {
+                System.out.print("*");
+            }
+            for(int m=1;m<=2*(row-i);m++)
+            {
+                System.out.print(" ");
+            }
+            for(int l=1;l<=i;l++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+         for(int i=row-1;i>=1;i--)
+        {
+            for(int k=1;k<=i;k++)
+            {
+                System.out.print("*");
+            }
+            for(int m=1;m<=2*(row-i);m++)
+            {
+                System.out.print(" ");
+            }
+            for(int l=1;l<=i;l++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //RHOMBUS
+        int row=sc.nextInt();
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=1;j<=row-i;j++)
+            {
+                System.out.print(" ");
+            }
+             for(int h=1;h<=row;h++)
+            {
+                System.out.print("*");
+            }
+             
+            System.out.println();
+        }
+        //DIAMOND
+        int row=sc.nextInt();
+        for(int i=1;i<=row;i++)
+        {
+            for(int  j=1;j<=row-i;j++)
+            {
+                System.out.print(" ");
+            }
+             for(int  k=1;k<(2*(i-1));k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=row-1;i>=1;i--)
+        {
+            for(int  j=1;j<=row-i;j++)
+            {
+                System.out.print(" ");
+            }
+             for(int  k=1;k<(2*(i-1));k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //HOLLOW DIAMOND
+        int row=sc.nextInt();
+        for(int i=1;i<=row;i++)
+        {
+            for(int k=1;k<=row-i;k++)
+            {
+                System.out.print(" ");
+            }
+        
+            for(int j=1;j<=2*i-1;j++)
+            {
+                if(j==1||j==2*i-1)
+                System.out.print("*");
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        
+        for(int i=row-1;i>=1;i--)
+        {
+            for(int k=1;k<=row-i;k++)
+            {
+                System.out.print(" ");
+            }
+        
+            for(int j=1;j<=2*i-1;j++)
+            {
+                if(j==1||j==2*i-1)
+                System.out.print("*");
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        //HOLLOW PYRAMID
+        int row=sc.nextInt();
+        for(int i=1;i<=row;i++)
+        {
+            for(int k=1;k<=row-i;k++)
+            {
+                System.out.print(" ");
+            }
+        
+            for(int j=1;j<=2*i-1;j++)
+            {
+                if(j==1||j==2*i-1||i==row)
+                System.out.print("*");
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        //NOT YET COMPLETED
+        int row=sc.nextInt();
+        int c=1;
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=1;j<=row-i;j++)
+            {
+                System.out.print(" ");
+            }
+             for(int j=1;j<=i;j++)
+            {
+                System.out.print(c);
+                c++;
+            }
+                System.out.println();
+        }*/
+       //PASCAL TRIANGLE
+         static int fact(int n)
+        {
+            if(n==0||n==1)
+            {
+                return 1;
+            }
+            else
+            {
+                return n*fact(n-1);
+            }
+        }
+        public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+         int row=sc.nextInt();
+        for(int i=0;i<row;i++)
+        {
+        for(int m=0;m<row-i;m++)
+        {
+            System.out.print(" ");
+        }
+        
+        
+        for(int k=0;k<=i;k++)
+        {
+            int ans=fact(i)/(fact(i-k)*fact(k));
+            System.out.print(ans+" ");
+        }
+        System.out.println();
+        }
+    }
+    
+}
+
 
